@@ -113,7 +113,7 @@
             this.btn_AcceptContract.Name = "btn_AcceptContract";
             this.btn_AcceptContract.Size = new System.Drawing.Size(122, 23);
             this.btn_AcceptContract.TabIndex = 5;
-            this.btn_AcceptContract.Text = "Szerződés vállalása\r\n";
+            this.btn_AcceptContract.Text = "Szerződés beadás";
             this.btn_AcceptContract.UseVisualStyleBackColor = true;
             this.btn_AcceptContract.Click += new System.EventHandler(this.btn_AcceptContract_Click);
             // 
