@@ -36,10 +36,8 @@
             this.lb_Available = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_StatusForm = new System.Windows.Forms.Button();
             this.btn_ContractForm = new System.Windows.Forms.Button();
-            this.label_Contractor = new System.Windows.Forms.Label();
-            this.label_Deadline = new System.Windows.Forms.Label();
+            this.btn_FinishedContracts = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,14 +63,14 @@
             // mi_NewContract
             // 
             this.mi_NewContract.Name = "mi_NewContract";
-            this.mi_NewContract.Size = new System.Drawing.Size(180, 22);
+            this.mi_NewContract.Size = new System.Drawing.Size(139, 22);
             this.mi_NewContract.Text = "Új Szerződés";
             this.mi_NewContract.Click += new System.EventHandler(this.mi_NewContract_Click);
             // 
             // mi_NewUser
             // 
             this.mi_NewUser.Name = "mi_NewUser";
-            this.mi_NewUser.Size = new System.Drawing.Size(180, 22);
+            this.mi_NewUser.Size = new System.Drawing.Size(139, 22);
             this.mi_NewUser.Text = "Új Válalkozó";
             // 
             // lb_Active
@@ -109,15 +107,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Foglalt Szerződések";
             // 
-            // btn_StatusForm
-            // 
-            this.btn_StatusForm.Location = new System.Drawing.Point(52, 289);
-            this.btn_StatusForm.Name = "btn_StatusForm";
-            this.btn_StatusForm.Size = new System.Drawing.Size(115, 23);
-            this.btn_StatusForm.TabIndex = 7;
-            this.btn_StatusForm.Text = "Szerződés státusza";
-            this.btn_StatusForm.UseVisualStyleBackColor = true;
-            // 
             // btn_ContractForm
             // 
             this.btn_ContractForm.Location = new System.Drawing.Point(52, 146);
@@ -127,33 +116,22 @@
             this.btn_ContractForm.Text = "Szerződés vállalása";
             this.btn_ContractForm.UseVisualStyleBackColor = true;
             // 
-            // label_Contractor
+            // btn_FinishedContracts
             // 
-            this.label_Contractor.AutoSize = true;
-            this.label_Contractor.Location = new System.Drawing.Point(49, 315);
-            this.label_Contractor.Name = "label_Contractor";
-            this.label_Contractor.Size = new System.Drawing.Size(44, 13);
-            this.label_Contractor.TabIndex = 9;
-            this.label_Contractor.Text = "Vállalta:";
-            // 
-            // label_Deadline
-            // 
-            this.label_Deadline.AutoSize = true;
-            this.label_Deadline.Location = new System.Drawing.Point(49, 341);
-            this.label_Deadline.Name = "label_Deadline";
-            this.label_Deadline.Size = new System.Drawing.Size(50, 13);
-            this.label_Deadline.TabIndex = 10;
-            this.label_Deadline.Text = "Határidő:";
+            this.btn_FinishedContracts.Location = new System.Drawing.Point(37, 289);
+            this.btn_FinishedContracts.Name = "btn_FinishedContracts";
+            this.btn_FinishedContracts.Size = new System.Drawing.Size(147, 23);
+            this.btn_FinishedContracts.TabIndex = 11;
+            this.btn_FinishedContracts.Text = "Kész szerződések listázása";
+            this.btn_FinishedContracts.UseVisualStyleBackColor = true;
             // 
             // form_index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(220, 385);
-            this.Controls.Add(this.label_Deadline);
-            this.Controls.Add(this.label_Contractor);
+            this.ClientSize = new System.Drawing.Size(220, 320);
+            this.Controls.Add(this.btn_FinishedContracts);
             this.Controls.Add(this.btn_ContractForm);
-            this.Controls.Add(this.btn_StatusForm);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_Available);
@@ -162,6 +140,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "form_index";
             this.Text = "Szerződések";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.form_index_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -176,13 +155,11 @@
         private System.Windows.Forms.ListBox lb_Available;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btn_StatusForm;
         private System.Windows.Forms.ToolStripMenuItem újFelvételeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mi_NewContract;
         private System.Windows.Forms.ToolStripMenuItem mi_NewUser;
         private System.Windows.Forms.Button btn_ContractForm;
-        private System.Windows.Forms.Label label_Contractor;
-        private System.Windows.Forms.Label label_Deadline;
+        private System.Windows.Forms.Button btn_FinishedContracts;
     }
 }
 

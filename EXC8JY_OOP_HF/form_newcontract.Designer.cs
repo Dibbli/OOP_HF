@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_ContractName = new System.Windows.Forms.TextBox();
             this.btn_SubmitContract = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_Deadline = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tb_ContractName
             // 
-            this.textBox1.Location = new System.Drawing.Point(49, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.tb_ContractName.Location = new System.Drawing.Point(49, 25);
+            this.tb_ContractName.Name = "tb_ContractName";
+            this.tb_ContractName.Size = new System.Drawing.Size(100, 20);
+            this.tb_ContractName.TabIndex = 0;
             // 
             // btn_SubmitContract
             // 
@@ -50,6 +50,7 @@
             this.btn_SubmitContract.TabIndex = 3;
             this.btn_SubmitContract.Text = "Submit";
             this.btn_SubmitContract.UseVisualStyleBackColor = true;
+            this.btn_SubmitContract.Click += new System.EventHandler(this.btn_SubmitContract_Click);
             // 
             // label1
             // 
@@ -69,25 +70,26 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Határidő";
             // 
-            // dateTimePicker1
+            // dtp_Deadline
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(3, 67);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtp_Deadline.Location = new System.Drawing.Point(3, 67);
+            this.dtp_Deadline.Name = "dtp_Deadline";
+            this.dtp_Deadline.Size = new System.Drawing.Size(200, 20);
+            this.dtp_Deadline.TabIndex = 6;
             // 
             // form_newcontract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(204, 119);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_Deadline);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_SubmitContract);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_ContractName);
             this.Name = "form_newcontract";
             this.Text = "Új Szerződés";
+            this.Load += new System.EventHandler(this.form_newcontract_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -95,10 +97,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_ContractName;
         private System.Windows.Forms.Button btn_SubmitContract;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtp_Deadline;
     }
 }
