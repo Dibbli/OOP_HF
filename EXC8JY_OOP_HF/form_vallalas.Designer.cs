@@ -33,6 +33,7 @@
             this.btn_AcceptContract = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dtp_SubmitTime = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lb_Users
@@ -53,7 +54,7 @@
             // 
             // btn_AcceptContract
             // 
-            this.btn_AcceptContract.Location = new System.Drawing.Point(98, 131);
+            this.btn_AcceptContract.Location = new System.Drawing.Point(95, 164);
             this.btn_AcceptContract.Name = "btn_AcceptContract";
             this.btn_AcceptContract.Size = new System.Drawing.Size(75, 23);
             this.btn_AcceptContract.TabIndex = 2;
@@ -78,11 +79,19 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Szerződések";
             // 
+            // dtp_SubmitTime
+            // 
+            this.dtp_SubmitTime.Location = new System.Drawing.Point(38, 138);
+            this.dtp_SubmitTime.Name = "dtp_SubmitTime";
+            this.dtp_SubmitTime.Size = new System.Drawing.Size(200, 20);
+            this.dtp_SubmitTime.TabIndex = 5;
+            // 
             // form_vallalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 177);
+            this.ClientSize = new System.Drawing.Size(274, 224);
+            this.Controls.Add(this.dtp_SubmitTime);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_AcceptContract);
@@ -90,6 +99,7 @@
             this.Controls.Add(this.lb_Users);
             this.Name = "form_vallalas";
             this.Text = "Szerződés vállalás";
+            this.Load += new System.EventHandler(this.form_vallalas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -102,5 +112,6 @@
         private System.Windows.Forms.Button btn_AcceptContract;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtp_SubmitTime;
     }
 }

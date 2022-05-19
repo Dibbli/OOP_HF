@@ -14,7 +14,8 @@ namespace EXC8JY_OOP_HF
     
     public partial class form_index : Form
     {
-        List<Contract> contracts = new List<Contract>();
+        public List<Contract> contracts = new List<Contract>();
+        public List<User> users = new List<User>();
         public form_index()
         {
             InitializeComponent();
@@ -29,6 +30,10 @@ namespace EXC8JY_OOP_HF
                 contracts.Add(frm.Contract);
                 lb_Available.Items.Add(frm.Contract.Name);
             }
+            if (frm.DialogResult == DialogResult.Cancel)
+            {
+                MessageBox.Show("Contract addition cancelled");
+            }            
         }
 
         private void form_index_FormClosing(object sender, FormClosingEventArgs e)
@@ -40,6 +45,13 @@ namespace EXC8JY_OOP_HF
                 writer.WriteLine(contract.Stuff);
             }
             writer.Close();
+            File.WriteAllText("users.txt", string.Empty);
+            StreamWriter writer2 = new StreamWriter("users.txt", true);
+            foreach (User user in users)
+            {
+                writer2.WriteLine(user.Stuff);
+            }
+            writer2.Close();
         }
         void Open()
         {
@@ -50,7 +62,7 @@ namespace EXC8JY_OOP_HF
                 string line = reader.ReadLine();
                 Contract contract;
                 string[] piece = line.Split(',');
-                
+
                 if (piece.Length == 2)
                 {
                     contract = new Contract();
@@ -68,6 +80,32 @@ namespace EXC8JY_OOP_HF
                 }
             }
             reader.Close();
+
+            users.Clear();
+            StreamReader reader2 = new StreamReader("users.txt");
+            while (!reader2.EndOfStream)
+            {
+                string line = reader2.ReadLine();
+                User user;
+                string[] piece = line.Split(',');
+                user = new User();
+                user.Name = piece[0];
+                users.Add(user);
+                
+            }
+            reader2.Close();
+        }
+            private void mi_NewUser_Click(object sender, EventArgs e)
+        {
+            form_newuser frm = new form_newuser();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                users.Add(frm.User);
+            }
+            if (frm.DialogResult == DialogResult.Cancel)
+            {
+                MessageBox.Show("User not added");
+            }
         }
 
     }

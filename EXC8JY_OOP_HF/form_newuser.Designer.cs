@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tb_Nev = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Submit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tb_Nev
             // 
-            this.textBox1.Location = new System.Drawing.Point(51, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.tb_Nev.Location = new System.Drawing.Point(51, 41);
+            this.tb_Nev.Name = "tb_Nev";
+            this.tb_Nev.Size = new System.Drawing.Size(100, 20);
+            this.tb_Nev.TabIndex = 0;
             // 
             // label1
             // 
@@ -57,6 +57,7 @@
             this.btn_Submit.TabIndex = 2;
             this.btn_Submit.Text = "Submit";
             this.btn_Submit.UseVisualStyleBackColor = true;
+            this.btn_Submit.Click += new System.EventHandler(this.btn_Submit_Click);
             // 
             // form_newuser
             // 
@@ -65,9 +66,10 @@
             this.ClientSize = new System.Drawing.Size(201, 119);
             this.Controls.Add(this.btn_Submit);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tb_Nev);
             this.Name = "form_newuser";
             this.Text = "Új Vállalkozó";
+            this.Load += new System.EventHandler(this.form_newuser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -75,7 +77,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tb_Nev;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_Submit;
     }
