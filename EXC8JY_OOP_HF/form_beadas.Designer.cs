@@ -1,6 +1,6 @@
 ﻿namespace EXC8JY_OOP_HF
 {
-    partial class form_vallalas
+    partial class form_beadas
     {
         /// <summary>
         /// Required designer variable.
@@ -30,10 +30,9 @@
         {
             this.lb_Users = new System.Windows.Forms.ListBox();
             this.clb_Contracts = new System.Windows.Forms.CheckedListBox();
-            this.btn_AcceptContract = new System.Windows.Forms.Button();
+            this.btn_FinishContract = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dtp_SubmitTime = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lb_Users
@@ -52,14 +51,15 @@
             this.clb_Contracts.Size = new System.Drawing.Size(120, 94);
             this.clb_Contracts.TabIndex = 1;
             // 
-            // btn_AcceptContract
+            // btn_FinishContract
             // 
-            this.btn_AcceptContract.Location = new System.Drawing.Point(95, 164);
-            this.btn_AcceptContract.Name = "btn_AcceptContract";
-            this.btn_AcceptContract.Size = new System.Drawing.Size(75, 23);
-            this.btn_AcceptContract.TabIndex = 2;
-            this.btn_AcceptContract.Text = "Submit";
-            this.btn_AcceptContract.UseVisualStyleBackColor = true;
+            this.btn_FinishContract.Location = new System.Drawing.Point(96, 132);
+            this.btn_FinishContract.Name = "btn_FinishContract";
+            this.btn_FinishContract.Size = new System.Drawing.Size(75, 23);
+            this.btn_FinishContract.TabIndex = 2;
+            this.btn_FinishContract.Text = "Submit";
+            this.btn_FinishContract.UseVisualStyleBackColor = true;
+            this.btn_FinishContract.Click += new System.EventHandler(this.btn_FinishContract_Click);
             // 
             // label1
             // 
@@ -79,26 +79,18 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Szerződések";
             // 
-            // dtp_SubmitTime
-            // 
-            this.dtp_SubmitTime.Location = new System.Drawing.Point(38, 138);
-            this.dtp_SubmitTime.Name = "dtp_SubmitTime";
-            this.dtp_SubmitTime.Size = new System.Drawing.Size(200, 20);
-            this.dtp_SubmitTime.TabIndex = 5;
-            // 
-            // form_vallalas
+            // form_beadas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(274, 224);
-            this.Controls.Add(this.dtp_SubmitTime);
+            this.ClientSize = new System.Drawing.Size(274, 166);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_AcceptContract);
+            this.Controls.Add(this.btn_FinishContract);
             this.Controls.Add(this.clb_Contracts);
             this.Controls.Add(this.lb_Users);
-            this.Name = "form_vallalas";
-            this.Text = "Szerződés vállalás";
+            this.Name = "form_beadas";
+            this.Text = "Szerződés beadása";
             this.Load += new System.EventHandler(this.form_vallalas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -109,9 +101,8 @@
 
         private System.Windows.Forms.ListBox lb_Users;
         private System.Windows.Forms.CheckedListBox clb_Contracts;
-        private System.Windows.Forms.Button btn_AcceptContract;
+        private System.Windows.Forms.Button btn_FinishContract;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DateTimePicker dtp_SubmitTime;
     }
 }

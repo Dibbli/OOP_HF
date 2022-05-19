@@ -36,6 +36,7 @@
             this.lb_Available = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_AcceptContract = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -106,11 +107,22 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Foglalt Szerződések";
             // 
+            // btn_AcceptContract
+            // 
+            this.btn_AcceptContract.Location = new System.Drawing.Point(45, 260);
+            this.btn_AcceptContract.Name = "btn_AcceptContract";
+            this.btn_AcceptContract.Size = new System.Drawing.Size(122, 23);
+            this.btn_AcceptContract.TabIndex = 5;
+            this.btn_AcceptContract.Text = "Szerződés vállalása\r\n";
+            this.btn_AcceptContract.UseVisualStyleBackColor = true;
+            this.btn_AcceptContract.Click += new System.EventHandler(this.btn_AcceptContract_Click);
+            // 
             // form_index
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(220, 289);
+            this.Controls.Add(this.btn_AcceptContract);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lb_Available);
@@ -137,6 +149,7 @@
         private System.Windows.Forms.ToolStripMenuItem újFelvételeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mi_NewContract;
         private System.Windows.Forms.ToolStripMenuItem mi_NewUser;
+        private System.Windows.Forms.Button btn_AcceptContract;
     }
 }
 

@@ -65,11 +65,11 @@
     <Compile Include="form_newuser.Designer.cs">
       <DependentUpon>form_newuser.cs</DependentUpon>
     </Compile>
-    <Compile Include="form_vallalas.cs">
+    <Compile Include="form_beadas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="form_vallalas.Designer.cs">
-      <DependentUpon>form_vallalas.cs</DependentUpon>
+    <Compile Include="form_beadas.Designer.cs">
+      <DependentUpon>form_beadas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,8 +84,8 @@
     <EmbeddedResource Include="form_newuser.resx">
       <DependentUpon>form_newuser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="form_vallalas.resx">
-      <DependentUpon>form_vallalas.cs</DependentUpon>
+    <EmbeddedResource Include="form_beadas.resx">
+      <DependentUpon>form_beadas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -32,7 +32,7 @@ namespace EXC8JY_OOP_HF
             }
             if (frm.DialogResult == DialogResult.Cancel)
             {
-                MessageBox.Show("Contract addition cancelled");
+                MessageBox.Show("Szerződés nem lett hozzáadva");
             }            
         }
 
@@ -104,9 +104,35 @@ namespace EXC8JY_OOP_HF
             }
             if (frm.DialogResult == DialogResult.Cancel)
             {
-                MessageBox.Show("User not added");
+                MessageBox.Show("Válalkozó nem lett hozzáadva");
             }
         }
 
+        private void btn_AcceptContract_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText("contracts.txt", string.Empty);
+            StreamWriter writer = new StreamWriter("contracts.txt", true);
+            foreach (Contract contract in contracts)
+            {
+                writer.WriteLine(contract.Stuff);
+            }
+            writer.Close();
+            File.WriteAllText("users.txt", string.Empty);
+            StreamWriter writer2 = new StreamWriter("users.txt", true);
+            foreach (User user in users)
+            {
+                writer2.WriteLine(user.Stuff);
+            }
+            writer2.Close();
+            form_beadas frm = new form_beadas();
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                
+            }
+            if (frm.DialogResult == DialogResult.Cancel)
+            {
+                MessageBox.Show("Szerzodes nem lett leadva");
+            }
+        }
     }
 }
